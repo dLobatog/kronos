@@ -6,13 +6,15 @@ as schedule operators. The definition of the grammar, still under construction, 
 
 ```
 S := (time-expression | time-unit | preposition)
-time-expression := ("every" time-unit) | ("each" time-unit)
+time-expression := (determiner time-unit preposition time-unit)
 time-unit := hour-expression | "hour" | "minute" |  "day" |  "week" |  "month" | "weekday" | "weekend"
 preposition := "on" |  "in" |  "at"
+determiner := "every" | "each"
 hour-expression := (12h-number ("am" | "pm")) | (24h-number)
 12h-number := "1" | "2" |  "3" |  "4" |  "5" |  "6" |  "7" | "8" | "9" | "10" | "11" | "12"
 24h-number := 12h-number | "13" |  "14" |  "15" |  "16" |  "17" |  "18" |  "19" |  "20" |  "21" |
-              "22" |  "23" |  "0""
+              "22" |  "23" |  "0"
+weekday := 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday'
 ```
 
 Sample sentences (grammar is not finished):
